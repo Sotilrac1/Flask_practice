@@ -1,11 +1,17 @@
-from flask import Flask, render_template
+from flask import Flask
 
-app=Flask(__name__)
+app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 
 def home():
-    return render_template("home.html")
+    pass
+
+@app.route("/about")
+
+def about():
+    pass
 
 if __name__=="__main__":
     app.run(debug=True)
+
