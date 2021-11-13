@@ -1,6 +1,17 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<h3>this is the home </h3>
+
+<h1>Home Page</h1>
+
+</br>
+
+<form method="post" enctype="multipart/form-data">
+  <div>
+    <label for="file">Choose file to upload</label>
+    <input type="file" id="file" name="file" multiple>
+    <button onclick="printstuff()">Submit</button>
+  </div>
+ </form>
 
 {% endblock %}
