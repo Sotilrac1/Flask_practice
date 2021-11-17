@@ -1,20 +1,19 @@
 from flask import Flask, render_template, request, url_for   
 from werkzeug.utils import redirect, secure_filename
 import os
-import converter
 import pandas as pd
 
 app = Flask(__name__)
 
-def convert(x):
+# def convert(x):
     
-    json_list = []
-    converted_list = []
+#     json_list = []
+#     converted_list = []
     
-    for i in filename:
-        df_json = pd.read_json(i)
-        converted_list = df_json.to_excel(i.filename)
-    return (print(converted_list))
+#     for i in filename:
+#         df_json = pd.read_json(i)
+#         converted_list = df_json.to_excel(i.filename)
+#     return (print(converted_list))
 
 @app.route('/')
 def home():
@@ -31,26 +30,6 @@ def submit():
 @app.route("/convert", methods=["POST", "GET"])
 def convert(json_file):
     return print(json_file)
-
-
-
-
-
-
-
-
-
-
-@app.route('/about')
-def about():
-    return render_template ("about.html")
-
-@app.route('/contact')
-def contact():
-    return render_template ("contact.html")
-
-
-
 
 
 
